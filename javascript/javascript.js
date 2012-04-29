@@ -379,10 +379,11 @@ function copypasta(){
 	    	zc.addEventListener( 'mouseDown', (function(){
 	    	    return function(client) {
 	    	      var text = elem.closest("pre")
-	    	      				 .nextAll('pre.rule').eq(0).find('.declaration-block').text();
+	    	      				 .nextAll('pre.rule').eq(0).find('.declaration-block').eq(0).text();
 	    	      text = text.replace(/ \/\*.*?\*\//g,''); // strip comments
-	    		    zc.setText( text );
-	    		    $(elem).fadeOut(50).fadeIn(300)
+	    	      text = text.replace(/ \#sandbox.*?\}/g, '') // strip declarations from mq
+	    		  zc.setText( text );
+	    		  $(elem).fadeOut(50).fadeIn(300)
 	    		}
 	    	})());
 		});

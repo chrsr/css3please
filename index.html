@@ -328,16 +328,11 @@
 
 <div id="media_query" class="rule_wrapper">
   <pre class="rule comment">/*                           <a class="cb">[to clipboard]</a><!-- <a class="off">[toggle rule off]</a>--> <span class="endcomment">*/</span></pre>
-  <pre class="rule">
-@media screen and (max-width: 510px) {
-  #sandboxwrap {
-    position: static;
-    left: 25px;
-  }
-  #sandbox {
-    width: 100%;
-  }
-}</pre>
+  <pre class="rule" id="mq"><span class="declaration-block">
+@media all and ( max-width: <b g="0">480px</b> ) {
+  #sandboxwrap { position: static; left: 25px; }
+  #sandbox { width: 100%; }
+}</span></pre>
   <!--  <pre class="rule comment commentclose"><span class="comment">/* */</span></pre> -->
 </div>
 
